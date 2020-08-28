@@ -1,21 +1,16 @@
 import styled from 'styled-components';
+import { Wrapper } from "../reuse/Wrapper";
+import { Container } from "../reuse/Container"
 
-export const StartPage = styled.div`
-height: 100%;
-position: relative;
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: flex-start;
+export const StartPage = styled(Container)`
 img{
     transform: scale(0.6);
     margin: -40px 0 30px 30px;
 }
-
 @media (min-width: 375px){
    img{
        transform: scale(0.7);
-       margin: 0 0 0 30px;
+       margin: -25px 0 0 30px;
    }
 }
 @media (min-width: 768px){
@@ -50,15 +45,11 @@ img{
         display: none;
     }
  }
-
 `
-export const Wrapper = styled.div`
+export const StartWrapper = styled(Wrapper)`
     position: absolute;
     bottom: 0;
     margin: 10px auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     @media (min-width: 768px) and (orientation: portrait){
         bottom: 5%;
  }
