@@ -5,11 +5,36 @@ import H1 from "../reuse/H1";
 import { ButtonsWrapper, SelectPage } from "./Select-style";
 import Media from "react-media";
 import Warning from "../ScreenWarning/Warning";
-import Loading from '../Loading/Loading';
-
-import searching from "../../assets/img/searching.png"
+import { useDispatch } from "react-redux";
+import { selectMovie } from "../../redux/actions";
+import movies from "./moviesId.json";
 
 function Select() {
+    const dispatch = useDispatch()
+    let movieDetails;
+    // Logic for fetching the movie data
+    const handleGetMovie = (movieId) => {
+        fetch(`http://www.omdbapi.com/?i=tt${movieId}&apikey=b9228ca1`)
+            .then(response => response.json())
+            .then(json => {
+                const title = json.Title;
+                const plot = json.Plot;
+                const poster = json.Poster;
+                movieDetails = { title, plot, poster }
+                return movieDetails
+            })
+            .then(movieDetails => dispatch(selectMovie(movieDetails.poster, movieDetails.title, movieDetails.plot)))
+            .catch(err => {
+                console.log(err);
+            });
+    }
+    // Logic for Logic for selecting a movie based on choosen genre
+    const handleMovieGenre = (e) => {
+        const genre = e.target.textContent.toLowerCase()
+        const movieIndex = Math.floor(Math.random() * movies[0][genre].length)
+        const movie = movies[0][genre][movieIndex]
+        handleGetMovie(movie)
+    }
     return (
         <Media query="( orientation: landscape ) and ( max-width: 1023px )"    >
             {matches => (
@@ -17,10 +42,10 @@ function Select() {
                     <SelectPage>
                         <H1>Which genre do you choose?</H1>
                         <ButtonsWrapper>
-                            <StyledLink to="/movie-app/"><Button>Horror</Button></StyledLink>
-                            <StyledLink to="/movie-app/"><Button>Comedy</Button></StyledLink>
-                            <StyledLink to="/movie-app/"><Button>Romance</Button></StyledLink>
-                            <StyledLink to="/movie-app/"><Button>Fantasy</Button></StyledLink>
+                            <StyledLink to="/movie-app/result"><Button onClick={handleMovieGenre}>Horror</Button></StyledLink>
+                            <StyledLink to="/movie-app/result"><Button onClick={handleMovieGenre}>Comedy</Button></StyledLink>
+                            <StyledLink to="/movie-app/result"><Button onClick={handleMovieGenre}>Romance</Button></StyledLink>
+                            <StyledLink to="/movie-app/result"><Button onClick={handleMovieGenre}>Fantasy</Button></StyledLink>
                         </ ButtonsWrapper>
                     </SelectPage>
             )}

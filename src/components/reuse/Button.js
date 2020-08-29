@@ -11,28 +11,34 @@ const Button = styled.button`
  cursor: pointer;
  margin: ${props => (props.start ? "25px auto" : "20px auto")};
  transition: all .7s ease-out;
- @media (min-width: 375px){
+ @media only screen and (min-width: 375px){
     margin: ${props => (props.start ? "35px auto" : "20px auto")};
 }
- @media (min-width: 768px){
+ @media only screen and (min-width: 768px){
     transform: ${props => (props.start ? "scale(1.3)" : "scale(1.6)")};
     margin: ${props => (props.start ? "35px auto" : "50px auto")};
 }
-@media (min-width: 1024px){
+@media only screen and (min-width: 1024px){
     &:hover{
         background-position: left bottom;
     };
 }
-@media (min-width: 1024px) and (orientation: portrait){
+@media only screen and (min-width: 1024px) and (orientation: portrait){
     transform: scale(1.7);
     margin 70px auto 35px;
 }
-@media (min-width: 1200px){
+@media only screen and (min-width: 1200px){
     transform: ${props => (props.start ? "scale(1.5)" : "scale(1.8)")};
     margin 60px auto 35px;
 }
  `
 export default Button
+
+export const SmallButton = styled(Button)`
+width: 120px;
+height: 30px;
+font-size: 14px;
+`
 
 export const StyledLink = styled(Link)`
     overflow: visible;
