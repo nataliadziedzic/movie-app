@@ -15,7 +15,7 @@ justify-content: center;
 export const ButtonsWrapper = styled(Wrapper)`
     justify-content: center;
     width: 100%;
-    @media only screen and(min-width: 1024px) and (orientation: landscape){
+    @media only screen and (min-width: 1024px) and (orientation: landscape){
         display: grid;
         grid-template-columns: 1fr 1fr
     }
