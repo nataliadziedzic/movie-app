@@ -35,9 +35,15 @@ const Button = styled.button`
 export default Button
 
 export const SmallButton = styled(Button)`
-width: 120px;
-height: 30px;
+width: 180px;
+height: 35px;
 font-size: 14px;
+@media only screen and (min-width: 768px){
+    margin: 0 0 30px 0;
+}
+@media only screen and (min-width: 1024px){
+    margin: 30px 0;
+}
 `
 
 export const StyledLink = styled(Link)`
