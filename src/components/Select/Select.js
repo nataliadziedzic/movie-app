@@ -28,7 +28,7 @@ function Select() {
                 console.log(err);
             });
     }
-    // Logic for Logic for selecting a movie based on choosen genre
+    // Logic for selecting a movie based on choosen genre
     const handleMovieGenre = (e) => {
         const genre = e.target.textContent.toLowerCase()
         const movieIndex = Math.floor(Math.random() * movies[0][genre].length)
@@ -42,10 +42,10 @@ function Select() {
                     <SelectPage>
                         <H1>Which genre do you choose?</H1>
                         <ButtonsWrapper>
-                            <StyledLink to="/movie-app/result"><Button onClick={handleMovieGenre}>Horror</Button></StyledLink>
-                            <StyledLink to="/movie-app/result"><Button onClick={handleMovieGenre}>Comedy</Button></StyledLink>
-                            <StyledLink to="/movie-app/result"><Button onClick={handleMovieGenre}>Romance</Button></StyledLink>
-                            <StyledLink to="/movie-app/result"><Button onClick={handleMovieGenre}>Fantasy</Button></StyledLink>
+                            <StyledLink to="/movie-app/loading"><Button onClick={handleMovieGenre}>Horror</Button></StyledLink>
+                            <StyledLink to="/movie-app/loading"><Button onClick={handleMovieGenre}>Comedy</Button></StyledLink>
+                            <StyledLink to="/movie-app/loading"><Button onClick={handleMovieGenre}>Romance</Button></StyledLink>
+                            <StyledLink to="/movie-app/loading"><Button onClick={handleMovieGenre}>Fantasy</Button></StyledLink>
                         </ ButtonsWrapper>
                     </SelectPage>
             )}

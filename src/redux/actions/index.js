@@ -6,3 +6,8 @@ export const selectMovie = (img, title, plot) => {
         plot
     }
 }
+export const loading = () => {
+    return {
+        type: "LOADING"
+    }
+}
