@@ -1,11 +1,11 @@
 import React from 'react';
-import { StyledLinkResult } from "./Result-style";
+import { StyledLink } from "../reuse/Button"
 import { useSelector } from "react-redux";
 import { Plot, Title, Poster, Intro, Line, ResultContainer } from "./Result-style";
 import { SmallButton } from "../reuse/Button";
 import Media from "react-media";
 import Warning from "../ScreenWarning/Warning";
-
+import { SpanResult } from "./Result-style"
 
 function Result() {
     const state = useSelector(state => state.movieReducer)
@@ -18,7 +18,7 @@ function Result() {
                         <Poster> <img src={state.img} alt="Movie poster" /> </Poster>
                         <Title>{state.title}</Title>
                         <Plot>{state.plot}</Plot>
-                        <StyledLinkResult to="/movie-app/customize"><SmallButton>Back</SmallButton></StyledLinkResult>
+                        <SpanResult><StyledLink to="/movie-app/customize"><SmallButton>Back</SmallButton></StyledLink></SpanResult>
                     </ResultContainer>
             )}
         </ Media>

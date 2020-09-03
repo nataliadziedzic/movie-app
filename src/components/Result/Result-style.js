@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { Container } from "../reuse/Container";
-import { StyledLink } from "../reuse/Button";
+import Span from "../reuse/Span";
 
 export const ResultContainer = styled(Container)`
 justify-content: center;
@@ -15,7 +15,7 @@ export const Intro = styled.h2`
 font-size: 24px;
 font-weight: 400;
 margin-left: -45px;
-max-width: 800px;
+max-width: 700px;
 @media only screen and (min-width: 768px){
     font-size: 34px;
 }
@@ -96,7 +96,7 @@ export const Title = styled.h2`
     font-size: 18px;
     text-shadow: 1px 1px rgb(0,0,0);
     overflow: visible;
-    max-width: 800px;
+    max-width: 700px;
 
     @media only screen and (min-width: 360px){
         font-size: 20px;
@@ -126,7 +126,7 @@ export const Plot = styled.p`
     height: 15%;
     overflow: auto;
     font-size: 15px;
-    max-width: 800px;
+    max-width: 700px;
     @media only screen and (min-width: 360px){
         height: 20%;
     }
@@ -146,12 +146,12 @@ export const Plot = styled.p`
         margin-right: 100px;y
     }
 `
-export const StyledLinkResult = styled(StyledLink)`
+export const SpanResult = styled(Span)`
     @media only screen and (min-width: 1024px) and (orientation: landscape){
     grid-row: 4;
     grid-column: 1/3;
     align-self: center;
-    max-width: 800px;
+    max-width: 700px;
     margin-right: 100px;
     }
 `

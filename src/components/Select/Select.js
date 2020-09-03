@@ -2,12 +2,13 @@ import React from 'react';
 import { StyledLink } from "../reuse/Button";
 import Button from "../reuse/Button";
 import H1 from "../reuse/H1";
+import Span from "../reuse/Span";
 import { ButtonsWrapper, SelectPage } from "./Select-style";
 import Media from "react-media";
 import Warning from "../ScreenWarning/Warning";
 import { useDispatch } from "react-redux";
 import { selectMovie } from "../../redux/actions";
-import movies from "./moviesId.json";
+import movies from "../../assets/data/moviesId.json";
 
 function Select() {
     const dispatch = useDispatch()
@@ -42,10 +43,10 @@ function Select() {
                     <SelectPage>
                         <H1>Which genre do you choose?</H1>
                         <ButtonsWrapper>
-                            <StyledLink to="/movie-app/loading"><Button onClick={handleMovieGenre}>Horror</Button></StyledLink>
-                            <StyledLink to="/movie-app/loading"><Button onClick={handleMovieGenre}>Comedy</Button></StyledLink>
-                            <StyledLink to="/movie-app/loading"><Button onClick={handleMovieGenre}>Romance</Button></StyledLink>
-                            <StyledLink to="/movie-app/loading"><Button onClick={handleMovieGenre}>Fantasy</Button></StyledLink>
+                            <Span><StyledLink to="/movie-app/loading"><Button onClick={handleMovieGenre}>Horror</Button></StyledLink></Span>
+                            <Span><StyledLink to="/movie-app/loading"><Button onClick={handleMovieGenre}>Comedy</Button></StyledLink></Span>
+                            <Span><StyledLink to="/movie-app/loading"><Button onClick={handleMovieGenre}>Romance</Button></StyledLink></Span>
+                            <Span><StyledLink to="/movie-app/loading"><Button onClick={handleMovieGenre}>Fantasy</Button></StyledLink></Span>
                         </ ButtonsWrapper>
                     </SelectPage>
             )}
