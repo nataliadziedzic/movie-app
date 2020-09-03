@@ -16,7 +16,13 @@ function Select() {
     // Logic for fetching the movie data
     const handleGetMovie = (movieId) => {
         fetch(`http://www.omdbapi.com/?i=tt${movieId}&apikey=b9228ca1`)
-            .then(response => response.json())
+            .then(response => {
+                console.log(response.status, response.Title)
+                if (response.status !== 200) {
+                    throw Error("Something went wrong.")
+                }
+                else return response.json()
+            })
             .then(json => {
                 const title = json.Title;
                 const plot = json.Plot;
