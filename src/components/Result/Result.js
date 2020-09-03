@@ -18,7 +18,7 @@ function Result() {
                         <Poster> <img src={state.img} alt="Movie poster" /> </Poster>
                         <Title>{state.title}</Title>
                         <Plot>{state.plot}</Plot>
-                        <SpanResult><StyledLink to="/movie-app/customize"><SmallButton>Back</SmallButton></StyledLink></SpanResult>
+                        <SpanResult><StyledLink to="/customize"><SmallButton>Back</SmallButton></StyledLink></SpanResult>
                     </ResultContainer>
             )}
         </ Media>

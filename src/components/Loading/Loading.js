@@ -20,7 +20,7 @@ function Loading() {
         <Container style={{ "justifyContent": "center" }}>
             <H1>Selecting a movie for you...</H1>
             <img src={searching} alt="computer" />
-            {!loadingState && <Redirect to="/movie-app/result" />}
+            {!loadingState && <Redirect to="/result" />}
         </Container>
     )
 }

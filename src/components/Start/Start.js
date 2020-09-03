@@ -12,7 +12,7 @@ function Start() {
             <img src={tele} alt="TV" />
             <StartWrapper>
                 <H1 start>Choose a movie!</H1>
-                <Span><StyledLink to='/movie-app/customize'><Button start>START</Button></StyledLink></Span>
+                <Span><StyledLink to='/customize'><Button start>START</Button></StyledLink></Span>
             </StartWrapper>
         </StartPage>
     )

@@ -43,10 +43,10 @@ function Select() {
                     <SelectPage>
                         <H1>Which genre do you choose?</H1>
                         <ButtonsWrapper>
-                            <Span><StyledLink to="/movie-app/loading"><Button onClick={handleMovieGenre}>Horror</Button></StyledLink></Span>
-                            <Span><StyledLink to="/movie-app/loading"><Button onClick={handleMovieGenre}>Comedy</Button></StyledLink></Span>
-                            <Span><StyledLink to="/movie-app/loading"><Button onClick={handleMovieGenre}>Romance</Button></StyledLink></Span>
-                            <Span><StyledLink to="/movie-app/loading"><Button onClick={handleMovieGenre}>Fantasy</Button></StyledLink></Span>
+                            <Span><StyledLink to="/loading"><Button onClick={handleMovieGenre}>Horror</Button></StyledLink></Span>
+                            <Span><StyledLink to="/loading"><Button onClick={handleMovieGenre}>Comedy</Button></StyledLink></Span>
+                            <Span><StyledLink to="/loading"><Button onClick={handleMovieGenre}>Romance</Button></StyledLink></Span>
+                            <Span><StyledLink to="/loading"><Button onClick={handleMovieGenre}>Fantasy</Button></StyledLink></Span>
                         </ ButtonsWrapper>
                     </SelectPage>
             )}
