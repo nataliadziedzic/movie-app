@@ -15,7 +15,7 @@ function Select() {
     let movieDetails;
     // Logic for fetching the movie data
     const handleGetMovie = (movieId) => {
-        fetch(`http://www.omdbapi.com/?i=tt${movieId}&apikey=b9228ca1`)
+        fetch(`https://www.omdbapi.com/?i=tt${movieId}&apikey=b9228ca1`)
             .then(response => {
                 console.log(response.status, response.Title)
                 if (response.status !== 200) {
