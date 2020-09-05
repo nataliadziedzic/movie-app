@@ -14,8 +14,13 @@ const GlobalStyle = createGlobalStyle`
 }
 body{
     height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
     width: 100vw;
     background-color: rgba(4,7,35,0.85);
+}
+#root {
+  height: 100%;
+  width: 100%;
 }
 ::selection {
     background: #ffb7b7;

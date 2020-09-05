@@ -7,7 +7,7 @@ import Result from "../Result/Result";
 import Loading from "../Loading/Loading";
 
 const StyledSection = styled.section`
-height: 81vh
+height: 80vh
 `
 
 function Section() {

@@ -1,10 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 const StyledFooter = styled.footer`
-position: absolute;
-bottom: 0;
-left: 0;
-right: 0;
 height: 4vh;
 display: flex;
 justify-content: center;
