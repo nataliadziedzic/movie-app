@@ -10,7 +10,9 @@ I started this project to learn how to use Redux and styled-components, get some
 ## Description
 ---
 Have you ever wanted to watch a movie after a long day, but picking any seemed impossible? </br> Either you couldn't get along with the other person or you didn't know what to choose? </br> 
-This app is designed to help you make your evening easier, all you have to do is select a genre and it will take care of the rest! </br> ...Now you have time to make a popcorn.
+This app is designed to help you make your evening easier, all you have to do is select a genre and it will take care of the rest! </br> ...Now you have time to make a popcorn. 
+</br> </br>
+![](https://raw.githubusercontent.com/nataliadziedzic/movie-app/master/src/assets/img/App.png)
 
 ## License
 
