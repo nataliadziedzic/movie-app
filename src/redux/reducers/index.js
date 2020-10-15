@@ -1,10 +1,10 @@
-import { combineReducers } from "redux";
-import movieReducer from "./movieReducer";
-import loadingReducer from "./loadingReducer"
+import { combineReducers } from 'redux';
+import movieReducer from './movieReducer';
+import loadingReducer from './loadingReducer';
 
 const allReducers = combineReducers({
-    movieReducer,
-    loadingReducer,
-})
+  movieReducer,
+  loadingReducer,
+});
 
-export default allReducers
+export default allReducers;

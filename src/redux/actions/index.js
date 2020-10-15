@@ -1,13 +1,9 @@
-export const selectMovie = (img, title, plot) => {
-    return {
-        type: "SELECT_MOVIE",
-        img,
-        title,
-        plot
-    }
-}
-export const loading = () => {
-    return {
-        type: "LOADING"
-    }
-}
+export const selectMovie = (img, title, plot) => ({
+  type: 'SELECT_MOVIE',
+  img,
+  title,
+  plot,
+});
+export const loading = () => ({
+  type: 'LOADING',
+});

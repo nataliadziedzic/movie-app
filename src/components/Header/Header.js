@@ -1,6 +1,7 @@
 import React from 'react';
-import styled from "styled-components"
-import logo from "../../assets/img/logo.png"
+import styled from 'styled-components';
+import logo from '../../assets/img/logo.png';
+
 const LogoContainer = styled.header`
 height: 16vh;
 @media only screen and (orientation: landscape){
@@ -23,12 +24,12 @@ height: 16vh;
         margin: 28px 0 0 55px;
     }
 }
-`
+`;
 
-function Header() {
-    return (
-        <LogoContainer><img src={logo} alt="logo" /></LogoContainer>
-    )
-}
+const Header = () => (
+  <LogoContainer>
+    <img src={logo} alt="logo" />
+  </LogoContainer>
+);
 
-export default Header
+export default Header;

@@ -1,22 +1,23 @@
+/* eslint-disable no-shadow */
 import React, { useEffect } from 'react';
-import Header from "../Header/Header";
-import Footer from "../Footer/Footer";
-import Section from "../Section/Section";
+import Header from '../Header/Header';
+import Footer from '../Footer/Footer';
+import Section from '../Section/Section';
 
-function App() {
+const App = () => {
   useEffect(() => {
-    let vh = window.innerHeight * 0.01;
-    document.documentElement.style.setProperty("--vh", `${vh}px`);
+    const vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
 
-    window.addEventListener("resize", () => {
-      let vh = window.innerHeight * 0.01;
-      document.documentElement.style.setProperty("--vh", `${vh}px`);
+    window.addEventListener('resize', () => {
+      const vh = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty('--vh', `${vh}px`);
     });
-    window.addEventListener("orientationchange", function () {
-      let vh = window.innerHeight * 0.01;
-      document.documentElement.style.setProperty("--vh", `${vh}px`);
+    window.addEventListener('orientationchange', function () {
+      const vh = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty('--vh', `${vh}px`);
     });
-  })
+  });
   return (
     <>
       <Header />
@@ -24,6 +25,6 @@ function App() {
       <Footer />
     </>
   );
-}
+};
 
 export default App;

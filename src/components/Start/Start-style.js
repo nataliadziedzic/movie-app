@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import { Wrapper } from "../reuse/Wrapper";
-import { Container } from "../reuse/Container"
+import { Wrapper } from '../reuse/Wrapper';
+import { Container } from '../reuse/Container';
 
 export const StartPage = styled(Container)`
 img{
@@ -45,24 +45,24 @@ img{
         display: none;
     }
  }
-`
+`;
 export const StartWrapper = styled(Wrapper)`
-    position: absolute;
-    bottom: 0;
-    margin: 10px auto;
-    @media only screen and (min-width: 768px) and (orientation: portrait){
-        bottom: 5%;
- }
- @media only screen and (min-width: 1024px){
+  position: absolute;
+  bottom: 0;
+  margin: 10px auto;
+  @media only screen and (min-width: 768px) and (orientation: portrait) {
+    bottom: 5%;
+  }
+  @media only screen and (min-width: 1024px) {
     right: 10%;
     bottom: 5%;
-} 
-@media only screen and (min-width: 1024px) and (orientation: portrait){
+  }
+  @media only screen and (min-width: 1024px) and (orientation: portrait) {
     right: 50%;
-    transform: translateX(50%)
-}
-@media only screen and (orientation: landscape)  and (max-width: 1023px) {
+    transform: translateX(50%);
+  }
+  @media only screen and (orientation: landscape) and (max-width: 1023px) {
     bottom: 50%;
-    transform: translateY(50%)
-}
-`
+    transform: translateY(50%);
+  }
+`;

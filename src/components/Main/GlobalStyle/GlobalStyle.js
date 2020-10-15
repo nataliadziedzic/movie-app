@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components"
+import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
 *{
@@ -28,6 +28,6 @@ body{
   ::-moz-selection {
     background: #ffb7b7;
   }
-`
+`;
 
-export default GlobalStyle
+export default GlobalStyle;
