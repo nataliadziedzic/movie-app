@@ -12,9 +12,10 @@ import Warning from '../ScreenWarning/Warning';
 const Select = () => {
   const dispatch = useDispatch();
   let movieDetails;
+  const KEY = process.env.REACT_APP_API_KEY;
   // Logic for fetching the movie data
   const handleGetMovie = (movieId) => {
-    fetch(`https://www.omdbapi.com/?i=tt${movieId}&apikey=b9228ca1`)
+    fetch(`https://www.omdbapi.com/?i=tt${movieId}&apikey=${KEY}`)
       .then((response) => {
         console.log(response.status, response.Title);
         if (response.status !== 200) {
